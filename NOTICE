@@ -1,0 +1,17 @@
+Sensocol Client Libraries
+Copyright 2012, Brainpage Ltd.
+
+This project includes software developed at The Apache Software Foundation
+(http://www.apache.org).
+
+This software contains code derived from the RSA Data Security
+Inc. MD5 Message-Digest Algorithm, including various
+modifications by Spyglass Inc., Carnegie Mellon University, and
+Bell Communications Research, Inc (Bellcore).
+
+Portins of this software, depending upon included components, are:
+- Copyright: Hiroshi Ichikawa <http://gimite.net/en/>
+- Copyright 2008-2012 Technische Universitaet Muenchen                     |
+- Copyright (C) 2008  Daniel Otte (daniel.otte@rub.de)
+-  Copyright (C) 2006-2010, Brainspark B.V.
+
