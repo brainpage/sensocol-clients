@@ -14,7 +14,7 @@ Sensocol is a protocol and data serialization method designed for transmitting t
   added encryption support.
   
 #### Big Picture Design
-Sensocol has to components: the schema and the encoded data.  
+Sensocol has two components: the schema and the encoded data.  
 
 The schema is a JSON document that describes the encoded data. At the head of the encoded data is a hash of the schema.
 If the server already knows the schema, it can decode the data.  If the server does not know this schema, it will request
@@ -44,7 +44,7 @@ The name of the feature.  Should be composed of characters (A-Za-z), numbers (0-
 are technically support, but not recommended.
 
 ##### type
-The type of the data.  See Encoding section above for types.
+The type of the data.  See Encoding section below for types.
 
 
 Encoding
@@ -102,7 +102,7 @@ This is a simple request/response transport like HTTP, but using far less bandwi
 
 The unencrypted format for a packet is:
     
-    [Command:4bits][Encoding:4bits][Size:2bytes][AccessKey:4bytes][SensorId:String][AccessToken:16bytes][SchemaMD5First4Bytes:4bytes][[UserToken:16bytes][SensocolData]
+    [Command:4bits][Encoding:4bits][Size:2bytes][AccessKey:4bytes][SensorId:String][AccessToken:16bytes][SchemaMD5First4Bytes:4bytes][SensocolData]
 
 * *Command:* For post, should be 0x1
 * *Encoding:* For default encodoing should be 0x0
@@ -151,7 +151,7 @@ The schema response packet is simple:
 
     [Command:4bits][Encoding:4bits][Size:2bytes][Schema]
     
-The command must be 0x4 and encoding is 0x0.  The schema must be a UTF-8 encoded JSON schema has described above.
+The command must be 0x4 and encoding is 0x0.  The schema must be a UTF-8 encoded JSON string that described above.
 
 The server will either using the response codes above.
 
